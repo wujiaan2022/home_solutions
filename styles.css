@@ -1,0 +1,136 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+body {
+    background: linear-gradient(to right, #004C6D, #65b6d1);
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the main_container vertically */
+    
+    
+}
+
+.main_container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Make the child elements stretch to the same height */
+    
+    
+    margin: 0;
+    
+    width: 60vw;
+    height: 60vh;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 0; /* Remove any margin to eliminate gaps */
+
+    flex: 1; /* Ensure both boxes take up equal width */
+    min-width: 0; /* Ensure content doesn't force the box to be wider */
+}
+
+.left_box {
+    background-color: #004C6D;
+    /* flex: 1; */
+    justify-content: center;
+    margin: 0; /* Ensure there's no margin between the boxes */
+    padding: 10px;
+}
+
+.left_text {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.left_icon img {
+    max-width: 130px; /* Allow the image to take up the full width of its container */
+  
+    flex-shrink: 1; /* Allow the image to shrink when necessary */
+}
+
+
+.right_box {
+    background-color: #dee2e4;
+    /* flex: 1; */
+    justify-content: center;
+    margin: 0; /* Ensure there's no margin between the boxes */
+    /* padding: 30px; */
+    gap: 10px;
+    
+}
+
+.button {
+    background-color: #dee2e4;
+    width: 90%;    
+    height: 30px;
+    /* flex: 1; */
+    /* flex-shrink: 0; */
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+    text-align: left; /* Align text to the start (left) of the button */
+    padding-left: 10px; /* Optional: add some padding to the left for spacing */
+    
+    border: 1px solid #cac7c7;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.button_blue {
+    background-color: #004C6D;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.text_login {
+    color: #03384f;
+    font-size: 24px;
+    margin: 0;
+}
+
+.text_register {
+    color: #03384f;
+    font-weight:bolder;
+    
+}
+
+.text_bottom {
+    padding: 10px;
+}
+
+
+/* Media query for screens 700px or smaller */
+@media (max-width: 700px) {
+    .main_container {
+        flex-direction: column; /* Stack the boxes vertically */
+        width: 80vw; /* Adjust the width to be more suitable for smaller screens */
+        height: 80vh; /* Adjust height to fit content */
+    }
+
+    .box {
+        width: 100%; /* Make each box take up full width of the container */
+    }
+}
